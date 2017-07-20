@@ -1,6 +1,6 @@
 {{> header }}
   <main class="container">
-    {{# cosmic.objects.type.posts }}
+    {{# cosmic.objects.type.listings }}
       <div class="card" data-href="/{{ slug }}">
         {{# metadata.hero.imgix_url }}
           <div class="blog-post-hero blog-post-hero--short" style="background-image: url({{ metadata.hero.imgix_url }})"></div>
@@ -22,6 +22,6 @@
           </div>
         </div>
       </div>  
-    {{/ cosmic.objects.type.posts }}
+    {{/ cosmic.objects.type.listings }}
   </main>
 {{> footer }}

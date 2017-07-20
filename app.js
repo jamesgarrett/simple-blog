@@ -5,10 +5,10 @@ const http_module = require('http')
 const http = http_module.Server(app)
 app.engine('html', hogan)
 app.set('port', (process.env.PORT || 3000))
-app.use('/', express.static(__dirname + '/public/'))
+app.use('/', express.static(__dirname + '/'))
 const Cosmic = require('cosmicjs')
 const helpers = require('./helpers')
-const bucket_slug = process.env.COSMIC_BUCKET || 'simple-blog-website'
+const bucket_slug = process.env.COSMIC_BUCKET || 'sloma'
 const read_key = process.env.COSMIC_READ_KEY
 const partials = {
   header: 'partials/header',
@@ -38,13 +38,13 @@ app.get('/', (req, res) => {
 app.get('/:slug', (req, res) => {
   Cosmic.getObjects({ bucket: { slug: bucket_slug, read_key: read_key } }, (err, response) => {
     const cosmic = response
-    if (cosmic.objects.type.posts) {
-      cosmic.objects.type.posts.forEach(post => {
-        const friendly_date = helpers.friendlyDate(new Date(post.created))
-        post.friendly_date = friendly_date.month + ' ' + friendly_date.date
+    if (cosmic.objects.type.listings) {
+      cosmic.objects.type.listings.forEach(listing => {
+        const friendly_date = helpers.friendlyDate(new Date(listing.created))
+        listing.friendly_date = friendly_date.month + ' ' + friendly_date.date
         // Get current post
         if (post.slug === req.params.slug)
-          res.locals.current_post = post
+          res.locals.current_listing = listing
       })
     } else {
       cosmic.no_posts = true
