@@ -29,6 +29,17 @@
     }
 }
 
+.input-group-btn:not(:first-child)>.btn, .input-group-btn:not(:first-child)>.btn-group {
+    z-index: 2;
+    margin-left: 4px;
+}
+
+.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+    padding: .75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0;
+}
+
 button {
     &:hover {
         cursor: pointer;

@@ -1,62 +1,7 @@
 /*!
- * Vitality v2.0.0 (http://themes.startbootstrap.com/vitality-v2.0.0)
- * Copyright 2013-2017 Start Bootstrap
- * Purchase a license to use this theme at (https://wrapbootstrap.com)
+ * SLOMA REAL ESTATE THEME
+ * JAMES GARRETT CO 2017
  */
-
-.input-group-btn:not(:first-child)>.btn, .input-group-btn:not(:first-child)>.btn-group {
-    z-index: 2;
-    margin-left: 4px;
-}
-
-button, input, optgroup, select, textarea {
-    font-family: freight-sans-pro;
-    color:#222;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-
-.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
-    padding: .75rem 1.5rem;
-    font-size: 1.25rem;
-    border-radius: 0;
-}
-
-.btn-primary {
-    border: 4px solid white;
-    margin-left: 5px;
-    background-color: transparent;
-}
-
-ul.footer.nav.navbar-nav {
-    display: inline-block;
-    float: none;
-    margin:25px 0;
-}
-
-footer.footer .logo{
-  padding: 50px 0px;
-}
-
-ul.footer.nav.navbar-nav li{
-  width: 150px;
-  float:left;
-  text-align: center;
-  font-family: 'freight-text-pro',serif;
-  font-size: 1.25rem;
-}
-
-.footer ul.dropdown-menu {
-    background: transparent;
-}
-
-button, input, optgroup, select, textarea {
-    font-family: freight-sans-pro;
-    border-radius: 0px;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-}
 
 html,
 body {
