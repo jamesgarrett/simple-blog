@@ -57,6 +57,12 @@ $(document).ready(function() {
         $('.navbar-collapse').collapse('hide');
     });
 
+    $( 'button' ).click(function() {
+      $('.navbar-collapse').toggleClass('collapse');
+      $('.navbar-toggler').toggleClass('clicked');
+    });
+
+
     // Activates floating label headings for the contact form
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
@@ -128,7 +134,7 @@ $(document).ready(function() {
 
     // Vide - Video Background Settings
     $('header.video').vide({
-        // mp4: "https://cosmicjs.imgix.net/450af060-6732-11e7-93bc-378cbd5c667a-chicago.mp4",
+        mp4: "https://cosmicjs.com/uploads/edd1ff50-6d85-11e7-a91e-510a8fff38c6-chicago.mp4",
         mp4: "mp4/chicago.mp4",
         poster: "img/agency/backgrounds/bg-mobile-fallback.png"
     }, {
