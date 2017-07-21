@@ -59,7 +59,7 @@ app.get('/:slug', (req, res) => {
 app.get('/author/:slug', (req, res) => {
   Cosmic.getObjects({ bucket: { slug: bucket_slug, read_key: read_key } }, (err, response) => {
     const cosmic = response
-    if (cosmic.objects.type.posts) {
+    if (cosmic.objects.type.listings) {
       let author_posts = []
       cosmic.objects.type.posts.forEach(post => {
         const friendly_date = helpers.friendlyDate(new Date(post.created))
