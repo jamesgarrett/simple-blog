@@ -1,27 +1,57 @@
 {{> header }}
-  <main class="container">
-    {{# cosmic.objects.type.listings }}
-      <div class="card" data-href="/{{ slug }}">
-        {{# metadata.hero.imgix_url }}
-          <div class="blog-post-hero blog-post-hero--short" style="background-image: url({{ metadata.hero.imgix_url }})"></div>
-        {{/ metadata.hero.imgix_url }}
-        <div class="card-padding">
-          <h2 class="blog__title blog__title--small">
-            <a href="/{{ slug }}">{{ title }}</a>
-          </h2>
-          <div class="blog__author">
-            <a href="/author/{{ metadata.author.slug }}">
-              <div class="blog__author-image" style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div>
-            </a>
-            <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ friendly_date }}</div>
-            <div class="clearfix"></div>
-          </div>
-          <div class="blog__teaser droid">{{{ metadata.teaser }}}</div>
-          <div class="blog__read-more">
-            <a href="/{{ slug }}">Read more...</a>
-          </div>
+    <section class="page-section bg-faded" id="listings" style="padding:0px;">
+
+      <!-- Portfolio Carousel -->
+      <div class="portfolio-carousel wow fadeIn owl-carousel owl-theme">
+      {{# cosmic.objects.type.listings }}
+        <div class="item">
+          <div class="container-fluid" data-href="/{{ slug }}">
+            <div class="row h-100">
+              <div class="col-md-5 push-md-7 my-auto">
+                <div class="project-details">
+                  <span class="project-name">{{ metadata.listing_status }}</span>
+                  <span class="project-description"><a href="/{{ slug }}">{{ title }}</a></span>
+                  <hr class="colored">
+                  <ul class="list-inline">
+                    <li class="inline-list-item">
+                    {{# metadata.description}} <span class="description">{{ metadata.description}}</span> {{/ metadata.description}}
+                    </li>
+                    <li class="inline-list-item">
+                      {{# metadata.beds}} <span class="beds"><strong>Beds:</strong> {{ metadata.beds}}</span> {{/ metadata.beds}}
+                    </li>
+                    <li class="inline-list-item">
+                      {{# metadata.baths}} <span class="baths"><strong>Baths:</strong> {{ metadata.baths}}</span> {{/ metadata.baths}}    
+                    </li>
+                    <li class="inline-list-item">
+                      {{# metadata.price}} <span class="price"><strong>Price:</strong> {{ metadata.price}}</span> {{/ metadata.price}}
+                    </li>
+                  </ul>
+                  <a href="/{{ slug }}" data-toggle="modal" class="btn btn-primary">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
+                  <a href="/agent/{{ metadata.agent.slug }}" class="btn btn-secondary">Contact An Agent <i class="fa fa-phone fa-fw"></i></a>
+                </div>
+              </div>
+              {{# metadata.hero.imgix_url }}
+              <div class="col-md-7 pull-md-5 hidden-xs my-auto">
+                  <div class="device-container">
+                      <div class="device-mockup macbook portrait black">
+                          <div class="device">
+                              <div class="screen">
+                                  <img class="img-fluid" src="{{ metadata.hero.imgix_url }}" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {{/ metadata.hero.imgix_url }}
+            </div>
+          </div>  
         </div>
-      </div>  
-    {{/ cosmic.objects.type.listings }}
+      {{/ cosmic.objects.type.listings }}
+    </section>
+
+    
+
+
   </main>
 {{> footer }}
+
