@@ -1,7 +1,8 @@
+    
     <!-- Footer -->
-    <footer class="footer" style="background-image: url('img/agency/backgrounds/bg-footer.jpg')">
+    <footer class="footer" style="background-image: url('{{ cosmic.object.footer.metadata.footer_bg.url }}')">
         <div class="text-center">
-            <img class="img-fluid logo" src="img/agency/logo.svg" alt="">
+            <img class="img-fluid logo" src="{{ cosmic.object.logos.metadata.text_logo.url }}" alt="">
         </div>
         <div class="text-center">
                 <ul class="footer nav navbar-nav">
@@ -26,7 +27,7 @@
                   <li><a href="#">Legal</a></li>
                 </ul>
         </div>
-            <div class="row text-center">
+<!--             <div class="row text-center">
                 <div class="col-md-4 footer-contact-details">
                     <h4><i class="fa fa-phone"></i> Call</h4>
                     <p>413.348.6339</p>
@@ -41,21 +42,16 @@
                     <p><a href="mailto:mail@example.com">isloma@jamesonsir.com</a>
                     </p>
                 </div>
-            </div>
+            </div> -->
             <div class="row footer-social text-center">
                 <div class="col-lg-12">
                     <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <img src="img/agency/logos/equal.png" alt="" width="50px">
+                        <li class="header">
+                          <h6 style="font-weight:bold;font-family:'freight-sans-pro',helvetica,sans-serif; margin:25px 0;">Connect With Us</h6>                          
                         </li>
                         <li class="list-inline-item">
-                            <img src="img/agency/logos/jamesonsothebys.png" alt="" width="175px">
+                            <a href="#"><i class="fa fa-phone fa-fw fa-2x"></i></a>
                         </li>
-                        <li class="list-inline-item">
-                            <img src="img/agency/logos/realtor.png" alt="" width="50px">
-                        </li>
-                    </ul>
-                    <ul class="list-inline">
                         <li class="list-inline-item">
                             <a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
                         </li>
@@ -66,10 +62,23 @@
                             <a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
                         </li>
                     </ul>
+                    <p class="copyright text-center" style="font-weight:bold;font-family:'freight-sans-pro',helvetica,sans-serif; margin:25px 0;">&copy;&nbsp;&nbsp;{{ year }} Sloma Real Estate Group</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <img src="{{ cosmic.object.logos.metadata.jameson_logo.url }}" alt="" width="250px">
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <img src="{{ cosmic.object.logos.metadata.equal_logo.url }}" alt="" width="50px">
+                        </li>
+                        <li class="list-inline-item" style="width:25px;"></li>
+                        <li class="list-inline-item">
+                            <img src="{{ cosmic.object.logos.metadata.realtor_logo.url }}" alt="" width="50px">
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <p class="copyright text-center">&copy;&nbsp;&nbsp;{{ year }} Sloma Real Estate Group</p>
         </div>
     </footer>
 
